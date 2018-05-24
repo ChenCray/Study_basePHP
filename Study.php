@@ -77,5 +77,10 @@
     return $rt;
   }
 
-  echo add_toInput(10);
+  echo add_toInput(10)."<br>";
+
+//test die() exit()
+  echo "1111<br>";
+  exit("exit<br>");
+  echo "2222<br>";
  ?>
