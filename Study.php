@@ -95,6 +95,10 @@
 
   var_export($tmp_array);
   echo '<br>';
+
+// strlen()
+  echo strlen($tmp_string) . "<br>";
+
 //test die() exit()
   echo "1111<br>";
   /*
