@@ -97,6 +97,12 @@
   echo '<br>';
 //test die() exit()
   echo "1111<br>";
+  /*
   exit("exit<br>");
   echo "2222<br>";
+  */
  ?>
+
+<?php
+  require_once "footer.php";
+?>
