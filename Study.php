@@ -78,7 +78,23 @@
   }
 
   echo add_toInput(10)."<br>";
+// var_dump(), echo, print, print_r(), var_export()
+  var_dump(PI);
+  echo '<br>';
 
+  $tmp_string = "abc";
+  var_dump($tmp_string);
+  echo '<br>';
+  var_dump($tmp_array);
+  echo '<br>';
+
+  echo "$tmp_array[0]<br>";
+  print"$tmp_array[1]<br>";
+  print_r($tmp_array);
+  echo "<br>";
+
+  var_export($tmp_array);
+  echo '<br>';
 //test die() exit()
   echo "1111<br>";
   exit("exit<br>");
