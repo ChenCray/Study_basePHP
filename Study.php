@@ -160,6 +160,10 @@
   echo $str_handle . "<br>";
   echo htmlspecialchars($str_handle) . "<br>";
 
+//round()
+  $num_float = 4.5708;
+  echo round($num_float)."<br>";
+  echo round($num_float, 3)."<br>";
 
 //test die() exit()
   echo "1111<br>";
