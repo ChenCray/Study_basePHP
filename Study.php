@@ -151,6 +151,9 @@
   echo date("Ymd his"). "<br>";
   echo date("H"). "<br>";
 
+//in_array() array_search()
+  echo "abc is in array " . in_array("abc" ,$tmp_array) ."<br>";
+  echo "value abc in array key is " . array_search("abc", $tmp_array)."<br>";
 //test die() exit()
   echo "1111<br>";
   /*
