@@ -136,6 +136,9 @@
     }
   }
   echo $rt_file . "<br>";
+//strtolower() strtoupper()
+  echo strtolower($rt_file) . "<br>";
+  echo strtoupper($rt_file) . "<br>";
 
 //test die() exit()
   echo "1111<br>";
