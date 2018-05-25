@@ -176,6 +176,17 @@
   */
  ?>
 
+<table border="1">
+  <tr>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>2</th>
+    <th>3</th>
+  </tr>
+</table>
+
+
 <?php
   require_once "footer.php";
 ?>
