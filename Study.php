@@ -154,6 +154,13 @@
 //in_array() array_search()
   echo "abc is in array " . in_array("abc" ,$tmp_array) ."<br>";
   echo "value abc in array key is " . array_search("abc", $tmp_array)."<br>";
+
+//htmlspecialchars()
+  $str_handle = 'str <a>"string" </a>';
+  echo $str_handle . "<br>";
+  echo htmlspecialchars($str_handle) . "<br>";
+
+
 //test die() exit()
   echo "1111<br>";
   /*
