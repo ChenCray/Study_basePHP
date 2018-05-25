@@ -105,6 +105,38 @@
 // strpos()
   echo strpos("abcedfgh", "ced") . "<br>";
 
+// strip_tags()
+  $boldString = "<b>Bold</b>";
+
+  echo $boldString . "<br>strip_tags: " . strip_tags($boldString) . "<br>";
+
+//RW file
+  function scan_file($input_file){
+    $rt_str = "";
+    while (!feof($input_file)) {
+      $rt_str .= fgets($input_file);
+    }
+    return $rt_str;
+  }
+
+  $strHelloWorld = "Hello World!!";
+  $file = fopen("test.xml", "w+");
+  fwrite($file, $strHelloWorld);
+  $rt_file = scan_file($file);
+  fclose($file);
+  echo $rt_file . "<br>";
+
+  $filename = "test.xml";
+  $rt_file = "";
+  if(file_exists($filename)){
+    $test_file = fopen($filename, "r");
+    if($test_file != NULL){
+      $rt_file = scan_file($test_file);
+      fclose($test_file);
+    }
+  }
+  echo $rt_file . "<br>";
+
 //test die() exit()
   echo "1111<br>";
   /*
