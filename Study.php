@@ -146,6 +146,11 @@
 //abs()
   echo abs(-1344) . "<br>";
   echo abs(234) . "<br>";
+
+//date()
+  echo date("Ymd his"). "<br>";
+  echo date("H"). "<br>";
+
 //test die() exit()
   echo "1111<br>";
   /*
