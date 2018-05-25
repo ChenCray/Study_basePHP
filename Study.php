@@ -143,6 +143,9 @@
 //md5()
   echo md5($rt_file) . "<br>";
 
+//abs()
+  echo abs(-1344) . "<br>";
+  echo abs(234) . "<br>";
 //test die() exit()
   echo "1111<br>";
   /*
