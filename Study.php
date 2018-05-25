@@ -102,6 +102,9 @@
 // str_replace()
   echo str_replace($tmp_string, "aaa", "abc def<br>");
 
+// strpos()
+  echo strpos("abcedfgh", "ced") . "<br>";
+
 //test die() exit()
   echo "1111<br>";
   /*
