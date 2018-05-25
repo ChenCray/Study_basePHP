@@ -140,6 +140,9 @@
   echo strtolower($rt_file) . "<br>";
   echo strtoupper($rt_file) . "<br>";
 
+//md5()
+  echo md5($rt_file) . "<br>";
+
 //test die() exit()
   echo "1111<br>";
   /*
