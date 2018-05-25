@@ -164,6 +164,9 @@
   $num_float = 4.5708;
   echo round($num_float)."<br>";
   echo round($num_float, 3)."<br>";
+//mb_substr()
+  $sub_str = "用指定編碼切割字串";
+  echo mb_substr($sub_str, 5, 20, "utf-8") . "<br>";
 
 //test die() exit()
   echo "1111<br>";
