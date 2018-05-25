@@ -186,6 +186,14 @@
   </tr>
 </table>
 
+<div style="padding:20px;border:5px solid;">
+<form action="test.php" method="post">
+　姓名：<input type="text" name="UserName"><br>
+　內容：<textarea name="Content"></textarea><br>
+　<input type="submit" value="送出表單">
+</form>
+</div>
+
 
 <?php
   require_once "footer.php";
