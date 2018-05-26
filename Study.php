@@ -184,6 +184,11 @@
  //base64
  var hw = "Hello World";
  var base64hw = btoa(hw);
+ //trim
+ var message = "    abc def     \r\n  ";
+
+ document.write(message.trim() + "<br/>");
+ document.write("length:" + message.trim().length);
 
  $(document) .ready(
    function(){
