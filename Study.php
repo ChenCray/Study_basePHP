@@ -179,7 +179,11 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
  </script>
  <script type="text/javascript">
+ //array
  var tmp_array = ["123", "abc"];
+ //base64
+ var hw = "Hello World";
+ var base64hw = btoa(hw);
 
  $(document) .ready(
    function(){
@@ -191,6 +195,8 @@
          console.log(tmp_array);
          console.log(tmp_array[0]);
          console.debug("test debug");
+         console.log(base64hw);
+         console.log(atob(base64hw));
        }
      );
    }
