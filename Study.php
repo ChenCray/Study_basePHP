@@ -179,6 +179,8 @@
  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
  </script>
  <script type="text/javascript">
+ var tmp_array = ["123", "abc"];
+
  $(document) .ready(
    function(){
      $("#checkButton") .click(
@@ -186,6 +188,9 @@
        $(".thClass1").slideUp();
          $("#thID1").slideDown(30);
          $(".formClass").slideToggle();
+         console.log(tmp_array);
+         console.log(tmp_array[0]);
+         console.debug("test debug");
        }
      );
    }
