@@ -188,7 +188,16 @@
  var message = "    abc def     \r\n  ";
 
  document.write(message.trim() + "<br/>");
- document.write("length:" + message.trim().length);
+ document.write("length:" + message.trim().length + "<br>");
+ //josn
+ var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';
+var contact = JSON.parse(jsontext);
+document.write(contact.surname + ", " + contact.firstname + "<br>");
+document.write(contact.phone[1] + "<br>");
+
+var arr = ["a", "b", "c"];
+var str = JSON.stringify(arr);
+document.write(str + "<br>");
 
  $(document) .ready(
    function(){
