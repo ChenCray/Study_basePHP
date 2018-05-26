@@ -175,18 +175,43 @@
   echo "2222<br>";
   */
  ?>
+<!--試載入JQuery-->
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js">
+ </script>
+ <script type="text/javascript">
+ $(document) .ready(
+   function(){
+     $("#checkButton") .click(
+       function(){
+       $(".thClass1").slideUp();
+         $("#thID1").slideDown(30);
+         $(".formClass").slideToggle();
+       }
+     );
+   }
+ );
+ </script>
+
+ <style type="text/css">
+ .thClass1{
+   display: block;
+ }
+ #thID1{
+   display: none;
+ }
+ </style>
 
 <table border="1">
   <tr>
-    <th>1</th>
+    <th class="thClass1">1</th>
   </tr>
   <tr>
-    <th>2</th>
-    <th>3</th>
+    <th id="checkButton">2</th>
+    <th id="thID1">3</th>
   </tr>
 </table>
 
-<div style="padding:20px;border:5px solid;">
+<div class="formClass" style="padding:20px;border:5px solid;">
 <form action="test.php" method="post">
 　姓名：<input type="text" name="UserName"><br>
 　內容：<textarea name="Content"></textarea><br>
