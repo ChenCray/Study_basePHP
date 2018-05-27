@@ -257,6 +257,16 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+$sql = "UPDATE base SET age=30 WHERE Name='abc'";
+
+if ($conn->query($sql) === TRUE) {
+    echo "Record updated successfully";
+} else {
+    echo "Error updating record: " . $conn->error;
+}
+echo "<br>";
+
 $sql = "SELECT id, Name, age FROM base";
 $result = $conn->query($sql);
 
