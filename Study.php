@@ -267,17 +267,40 @@ if ($conn->query($sql) === TRUE) {
 }
 echo "<br>";
 
-$sql = "SELECT id, Name, age FROM base";
+$sql = "SELECT base.id as id, base.Name as Name, base.age as age, studyJOIN.sex as sex
+        FROM base
+        RIGHT JOIN studyJOIN ON studyJOIN.Name = base.Name";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "  - age: " . $row["age"]. "<br>";
+        echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "  - age: " . $row["age"]. " - sex: " . $row["sex"] ."<br>";
     }
 } else {
     echo "0 results<br>";
 }
+
+$sql = "SELECT base.id as id, base.Name as Name, base.age as age, studyJOIN.sex as sex
+        FROM base
+        INNER JOIN studyJOIN ON studyJOIN.Name = base.Name
+        WHERE age > 18
+        UNION
+        SELECT base.id as id, base.Name as Name, base.age as age, studyJOIN.sex as sex
+        FROM base
+        INNER JOIN studyJOIN ON studyJOIN.Name = base.Name
+        WHERE sex = 'F'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["Name"]. "  - age: " . $row["age"]. " - sex: " . $row["sex"] ."<br>";
+    }
+} else {
+    echo "0 results<br>";
+}
+
 $conn->close();
 
 ?>
